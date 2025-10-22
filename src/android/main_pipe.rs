@@ -175,7 +175,7 @@ impl<'a> MainPipe<'a> {
           }
 
           // Create and set webview client
-          let client_class_name = format!("{}/RustWebViewClient", PACKAGE.get().unwrap());
+          let client_class_name = format!("{}/CustomRustWebViewClient", PACKAGE.get().unwrap());
           let rust_webview_client_class =
             find_class(&mut self.env, activity, client_class_name.clone())?;
           let webview_client = self.env.new_object(

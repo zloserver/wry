@@ -13,11 +13,11 @@ import android.view.KeyEvent
 import androidx.appcompat.app.AppCompatActivity
 
 abstract class WryActivity : AppCompatActivity() {
-    private lateinit var mWebView: RustWebView
+    public lateinit var mWebView: RustWebView
 
     open fun onWebViewCreate(webView: WebView) { }
 
-    fun setWebView(webView: RustWebView) {
+    open fun setWebView(webView: RustWebView) {
         mWebView = webView
         onWebViewCreate(webView)
     }

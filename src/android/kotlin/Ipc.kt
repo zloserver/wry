@@ -8,7 +8,7 @@ package {{package}}
 
 import android.webkit.*
 
-class Ipc(val webViewClient: RustWebViewClient) {
+class Ipc(val webViewClient: CustomRustWebViewClient) {
     @JavascriptInterface
     fun postMessage(message: String?) {
         message?.let {m ->
